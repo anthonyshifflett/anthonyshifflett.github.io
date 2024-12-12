@@ -27,10 +27,15 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Move dist contents to root
+        run: |
+          mv dist/* .
+          rm -rf dist
+
       - name: Deploy
         run: |
           git config --global user.name github-actions
           git config --global user.email github-actions@github.com
-          git add dist -f
-          git commit -m "Deploy dist folder"
+          git add .
+          git commit -m "Deploy build to root"
           git push origin main
