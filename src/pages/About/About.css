@@ -1,0 +1,139 @@
+.about {
+    background-color: var(--background-color);
+}
+
+.about .section-container {
+    padding-top: 9rem;
+}
+
+.about-intro-section {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    align-items: start;
+}
+
+.about-image-container {
+    flex: 0 0 auto;
+    width: 300px;
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+    transform: scale(1.05);
+}
+
+.about-intro {
+    flex: 1;
+}
+
+.about-intro h3 {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.about-tagline {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.about-description p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.about-highlights {
+    margin-bottom: 4rem;
+}
+
+.about-highlights h3 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.highlight-card {
+    padding: 1.5rem;
+    background-color: #f8fafc;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.highlight-card p {
+    line-height: 1.6;
+}
+
+.certifications {
+    margin-top: 2rem;
+}
+
+.certifications h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.certifications-list {
+    list-style: none;
+    padding: 0;
+}
+
+.certifications-list li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.certifications-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .about .section-container {
+        padding-top: 7rem;
+    }
+
+    .about-intro-section {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-image-container {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+}

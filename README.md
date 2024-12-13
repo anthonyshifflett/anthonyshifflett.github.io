@@ -1,50 +1,185 @@
-# React + TypeScript + Vite
+# Personal Portfolio Website - CS601 Term Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
+This project serves as the final deliverable for CS601 Web Application Development. It demonstrates practical application of web development concepts, frameworks, and best practices learned throughout the course. The portfolio website aims to showcase professional experience while implementing core web technologies in a real-world application.
 
-Currently, two official plugins are available:
+## Project Requirements Fulfilled
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Core Requirements
+- 5-10 content pages implementing course material
+- GitHub-hosted codebase with public access
+- Portfolio focus with personal/professional content
+- Implementation of majority of course concepts
+- Clean, documented, and maintainable code
+- Cross-browser and device compatibility
+- Accessibility compliance
 
-## Expanding the ESLint configuration
+### Content Pages
+1. **Home Page**
+   - Professional introduction
+   - Quick navigation to key sections
+   - Call-to-action buttons for projects and contact
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. **About Page**
+   - Professional biography
+   - Career highlights
+   - Educational background
+   - Professional certifications
 
-- Configure the top-level `parserOptions` property like this:
+3. **Skills Page**
+   - Technical skills visualization
+   - Proficiency ratings
+   - Categorized skill sets
+   - Interactive skill displays
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+4. **Projects Page**
+   - Portfolio of work
+   - Project descriptions
+   - Technology stacks used
+   - Live demos and GitHub links
+
+5. **Resume Page**
+   - Professional experience
+   - Educational background
+   - Downloadable PDF version
+   - Skills and certifications
+
+6. **Contact Page**
+   - Contact form
+   - Professional social links
+   - Location information
+   - Direct email option
+
+### Technical Implementation
+
+#### Core Technologies
+- **HTML5**
+  - Semantic markup
+  - Accessible structure
+  - Meta tags for SEO
+  - Open Graph protocol support
+
+- **CSS3**
+  - Custom properties for theming
+  - Flexbox and Grid layouts
+  - Responsive design
+  - Mobile-first approach
+  - Animations and transitions
+  - Media queries for breakpoints
+
+- **JavaScript/TypeScript**
+  - ES6+ features
+  - Type safety with TypeScript
+  - Modular code structure
+  - Error handling
+  - Form validation
+  - Async operations
+
+- **React**
+  - Functional components
+  - React Hooks
+  - Custom hooks
+  - Context API
+  - Route management
+  - Code splitting
+  - Lazy loading
+
+#### Extra Credit Features
+1. **TypeScript Integration**
+   - Strong typing
+   - Interface definitions
+   - Type guards
+   - Generic types
+   - Utility types
+
+2. **Responsive Design**
+   - CSS Grid Layout
+   - Flexbox
+   - No framework dependencies
+   - Custom breakpoints
+   - Fluid typography
+
+3. **Performance Optimization**
+   - Code splitting
+   - Lazy loading
+   - Image optimization
+   - Cache management
+   - Bundle size optimization
+
+## Project Structure
+```
+portfolio/
+├── public/
+│   ├── assets/
+│   │   ├── images/
+│   │   └── documents/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── ErrorBoundary/
+│   │   ├── Footer/
+│   │   ├── Header/
+│   │   ├── Loading/
+│   │   └── Navigation/
+│   ├── pages/
+│   │   ├── About/
+│   │   ├── Contact/
+│   │   ├── Home/
+│   │   ├── NotFound/
+│   │   ├── Projects/
+│   │   ├── Resume/
+│   │   └── Skills/
+│   ├── styles/
+│   │   ├── global.css
+│   │   └── variables.css
+│   ├── types/
+│   │   └── index.ts
+│   ├── App.tsx
+│   └── main.tsx
+├── .eslintrc.json
+├── .gitignore
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Setup and Development
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Prerequisites
+- Node.js (v18.0.0 or higher)
+- npm (v8.0.0 or higher)
+- Git
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### Installation
+1. Clone the repository
+```bash
+git clone https://github.com/anthonyshifflett/portfolio.git
+cd portfolio
 ```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Start development server
+```bash
+npm run dev
+```
+
+4. Run tests
+```bash
+npm test
+```
+
+5. Build for production
+```bash
+npm run build
+```
+
+### Available Scripts
+- `npm run dev`: Start development server
+- `npm run build`: Build for production
+- `npm run preview`: Preview production build
+- `npm run lint`: Run ESLint
+- `npm test`: Run test suite
