@@ -1,5 +1,6 @@
 import React from 'react';
 import { Skill } from '../../types';
+import SkillCard from '../../components/SkillCard/SkillCard';
 import './Skills.css';
 
 const Skills: React.FC = () => {
@@ -56,18 +57,7 @@ const Skills: React.FC = () => {
                             {skills
                                 .filter(skill => skill.category === categoryKey)
                                 .map((skill) => (
-                                    <div key={skill.name} className="skill-item">
-                                        <h4>{skill.name}</h4>
-                                        <div className="skill-level">
-                                            {[...Array(5)].map((_, index) => (
-                                                <div
-                                                    key={index}
-                                                    className={`level-dot ${index < skill.level ? 'filled' : ''}`}
-                                                    title={`Level ${skill.level} out of 5`}
-                                                />
-                                            ))}
-                                        </div>
-                                    </div>
+                                    <SkillCard key={skill.name} skill={skill} />
                                 ))}
                         </div>
                     </div>

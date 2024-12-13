@@ -10,7 +10,7 @@ export interface Project {
 
 export interface Skill {
     name: string;
-    level: number; // 1-5
+    level: number;
     category: 'development' | 'testing' | 'tools' | 'ai';
 }
 
@@ -31,4 +31,26 @@ export interface ContactForm {
     name: string;
     email: string;
     message: string;
+}
+
+export interface ProjectCardProps {
+    project: Project;
+}
+
+export interface SkillCardProps {
+    skill: Skill;
+}
+
+export interface ExperienceItemProps {
+    experience: Experience;
+}
+
+export interface EducationItemProps {
+    education: Education;
+}
+
+export type SkillCategory = 'development' | 'testing' | 'tools' | 'ai';
+
+export interface CategoryMap {
+    [key: string]: string;
 }

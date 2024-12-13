@@ -1,0 +1,34 @@
+.skill-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card h4 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.skill-level {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.level-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #e5e7eb;
+    transition: background-color 0.3s ease;
+}
+
+.level-dot.filled {
+    background-color: var(--primary-color);
+}

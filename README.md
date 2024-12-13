@@ -108,39 +108,66 @@ This project serves as the final deliverable for CS601 Web Application Developme
 
 ## Project Structure
 ```
-portfolio/
-├── public/
-│   ├── assets/
-│   │   ├── images/
-│   │   └── documents/
-│   └── index.html
-├── src/
-│   ├── components/
-│   │   ├── ErrorBoundary/
-│   │   ├── Footer/
-│   │   ├── Header/
-│   │   ├── Loading/
-│   │   └── Navigation/
-│   ├── pages/
-│   │   ├── About/
-│   │   ├── Contact/
-│   │   ├── Home/
-│   │   ├── NotFound/
-│   │   ├── Projects/
-│   │   ├── Resume/
-│   │   └── Skills/
-│   ├── styles/
-│   │   ├── global.css
-│   │   └── variables.css
-│   ├── types/
-│   │   └── index.ts
-│   ├── App.tsx
-│   └── main.tsx
-├── .eslintrc.json
-├── .gitignore
-├── package.json
-├── tsconfig.json
-└── vite.config.ts
+src/
+├── components/
+│   ├── ErrorBoundary/
+│   │   ├── ErrorBoundary.tsx
+│   │   └── ErrorBoundary.css
+│   ├── Footer/
+│   │   ├── Footer.tsx
+│   │   └── Footer.css
+│   ├── Header/
+│   │   ├── Header.tsx
+│   │   └── Header.css
+│   ├── Loading/
+│   │   ├── Loading.tsx
+│   │   └── Loading.css
+│   ├── Navigation/
+│   │   ├── Navigation.tsx
+│   │   └── Navigation.css
+│   ├── ProjectCard/
+│   │   ├── ProjectCard.tsx
+│   │   └── ProjectCard.css
+│   ├── SkillCard/
+│   │   ├── SkillCard.tsx
+│   │   └── SkillCard.css
+│   ├── ExperienceItem/
+│   │   ├── ExperienceItem.tsx
+│   │   └── ExperienceItem.css
+│   └── EducationItem/
+│       ├── EducationItem.tsx
+│       └── EducationItem.css
+├── pages/
+│   ├── About/
+│   │   ├── About.tsx
+│   │   └── About.css
+│   ├── Contact/
+│   │   ├── Contact.tsx
+│   │   └── Contact.css
+│   ├── Home/
+│   │   ├── Home.tsx
+│   │   └── Home.css
+│   ├── NotFound/
+│   │   ├── NotFound.tsx
+│   │   └── NotFound.css
+│   ├── Projects/
+│   │   ├── Projects.tsx
+│   │   └── Projects.css
+│   ├── Resume/
+│   │   ├── Resume.tsx
+│   │   └── Resume.css
+│   └── Skills/
+│       ├── Skills.tsx
+│       └── Skills.css
+├── styles/
+│   ├── variables.css
+│   └── global.css
+├── types/
+│   └── index.ts
+├── App.tsx
+├── App.css
+├── main.tsx
+└── vite-env.d.ts
 ```
 
 ## Setup and Development

@@ -1,0 +1,17 @@
+.education-item {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background-color: #f8fafc;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.education-item h4 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.education-item p {
+    color: #6b7280;
+    line-height: 1.6;
+}

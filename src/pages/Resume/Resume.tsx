@@ -1,5 +1,7 @@
 import React from 'react';
 import { Experience, Education } from '../../types';
+import ExperienceItem from '../../components/ExperienceItem/ExperienceItem';
+import EducationItem from '../../components/EducationItem/EducationItem';
 import './Resume.css';
 
 const Resume: React.FC = () => {
@@ -88,29 +90,14 @@ const Resume: React.FC = () => {
                 <div className="resume-section">
                     <h3>Professional Experience</h3>
                     {experiences.map((exp, index) => (
-                        <div key={index} className="experience-item">
-                            <div className="experience-header">
-                                <h4>{exp.title}</h4>
-                                <p className="company-info">
-                                    {exp.company} | {exp.location} | {exp.period}
-                                </p>
-                            </div>
-                            <ul className="achievements-list">
-                                {exp.achievements.map((achievement, i) => (
-                                    <li key={i}>{achievement}</li>
-                                ))}
-                            </ul>
-                        </div>
+                        <ExperienceItem key={index} experience={exp} />
                     ))}
                 </div>
 
                 <div className="resume-section">
                     <h3>Education</h3>
                     {education.map((edu, index) => (
-                        <div key={index} className="education-item">
-                            <h4>{edu.school}</h4>
-                            <p>{edu.degree}</p>
-                        </div>
+                        <EducationItem key={index} education={edu} />
                     ))}
                 </div>
             </div>
