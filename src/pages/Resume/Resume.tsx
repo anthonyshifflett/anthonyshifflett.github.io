@@ -55,7 +55,7 @@ const Resume: React.FC = () => {
             <div className="section-container">
                 <div className="resume-header">
                     <h2 className="section-title">Resume</h2>
-                    <a href="public/resume.pdf" target="_blank" rel="noopener noreferrer" className="download-button">
+                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="download-button">
                         Download Resume (PDF)
                     </a>
                 </div>
