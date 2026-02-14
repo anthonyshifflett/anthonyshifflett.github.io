@@ -11,8 +11,10 @@ const Skills: React.FC = () => {
         { name: 'JavaScript', level: 5, category: 'development' },
         { name: 'HTML/CSS', level: 5, category: 'development' },
         { name: 'Next.js', level: 4, category: 'development' },
+        { name: 'Angular', level: 4, category: 'development' },
         { name: 'Vue.js', level: 4, category: 'development' },
         { name: 'Flutter', level: 4, category: 'development' },
+        { name: 'Dart', level: 4, category: 'development' },
         { name: 'Ruby on Rails', level: 4, category: 'development' },
         { name: 'Python', level: 4, category: 'development' },
 
@@ -26,6 +28,7 @@ const Skills: React.FC = () => {
         // Tools
         { name: 'Git', level: 5, category: 'tools' },
         { name: 'Storybook', level: 5, category: 'tools' },
+        { name: 'Chromatic', level: 5, category: 'tools' },
         { name: 'Jest', level: 5, category: 'tools' },
         { name: 'AWS', level: 4, category: 'tools' },
         { name: 'Azure DevOps', level: 4, category: 'tools' },
@@ -35,7 +38,10 @@ const Skills: React.FC = () => {
         // AI/ML
         { name: 'OpenAI', level: 4, category: 'ai' },
         { name: 'Claude AI', level: 4, category: 'ai' },
-        { name: 'Gemini', level: 3, category: 'ai' }
+        { name: 'Gemini', level: 4, category: 'ai' },
+        { name: 'Antigravity', level: 4, category: 'ai' },
+        { name: 'Windsurf', level: 4, category: 'ai' },
+        { name: 'Cursor', level: 4, category: 'ai' }
     ];
 
     const categories = {
