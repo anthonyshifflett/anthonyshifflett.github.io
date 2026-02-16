@@ -54,11 +54,11 @@ const Skills: React.FC = () => {
     return (
         <div className="skills-page">
             <div className="section-container">
-                <h2 className="section-title">Skills & Expertise</h2>
+                <h1 className="section-title">Skills & Expertise</h1>
 
                 {Object.entries(categories).map(([categoryKey, categoryName]) => (
                     <div key={categoryKey} className="skills-category">
-                        <h3>{categoryName}</h3>
+                        <h2>{categoryName}</h2>
                         <div className="skills-grid">
                             {skills
                                 .filter(skill => skill.category === categoryKey)

@@ -2,6 +2,7 @@ import React from 'react';
 import { Experience, Education } from '../../types';
 import ExperienceItem from '../../components/ExperienceItem/ExperienceItem';
 import EducationItem from '../../components/EducationItem/EducationItem';
+import CertificationItem from '../../components/CertificationItem/CertificationItem';
 import './Resume.css';
 
 const Resume: React.FC = () => {
@@ -64,55 +65,76 @@ const Resume: React.FC = () => {
         tooling: 'Storybook, Chromatic, Style Dictionary, Jest, NX, Playwright, Cucumber, Selenium, Webpack, Vite, Framer, Figma, AWS, Azure DevOps, CircleCI, Cloud 66, Node.js, NPM, Git'
     };
 
+    const certifications = [
+        {
+            issuer: "Google",
+            items: [
+                "UX Design Professional Certificate",
+                "Cybersecurity Certificate"
+            ]
+        }
+    ];
+
     return (
         <div className="resume-page">
             <div className="section-container">
                 <div className="resume-header">
-                    <h2 className="section-title">Resume</h2>
-                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="download-button">
+                    <h1 className="section-title">Resume</h1>
+                    <a href="/resume.pdf" download="Anthony_Shifflett_Resume.pdf" type="application/pdf" className="download-button" aria-label="Download Resume (PDF)">
                         Download Resume (PDF)
                     </a>
                 </div>
 
                 <div className="resume-section">
-                    <h3>Summary</h3>
-                    <p>Results-driven Frontend Engineer with 10+ years of experience building design systems, component libraries, and accessible, production-grade interfaces. Expertise in React, Angular, TypeScript, Sass/SCSS, and Storybook, with a proven track record of translating Figma designs into scalable, reusable components. Passionate about developer experience, WCAG compliance, and bridging the gap between design and engineering.</p>
+                    <h2>Summary</h2>
+                    <div className="summary-card">
+                        <p>Results-driven Frontend Engineer with 10+ years of experience building design systems, component libraries, and accessible, production-grade interfaces. Expertise in React, Angular, TypeScript, Sass/SCSS, and Storybook, with a proven track record of translating Figma designs into scalable, reusable components. Passionate about developer experience, WCAG compliance, and bridging the gap between design and engineering.</p>
+                    </div>
                 </div>
 
                 <div className="resume-section">
-                    <h3>Skills</h3>
+                    <h2>Technical Skills</h2>
                     <div className="skills-content">
                         <div className="skill-group">
-                            <h4>Software Development:</h4>
+                            <h3>Software Development:</h3>
                             <p>{skills.development}</p>
                         </div>
                         <div className="skill-group">
-                            <h4>Testing Methodologies:</h4>
+                            <h3>Testing Methodologies:</h3>
                             <p>{skills.testing}</p>
                         </div>
                         <div className="skill-group">
-                            <h4>AI/ML:</h4>
+                            <h3>AI/ML:</h3>
                             <p>{skills.ai}</p>
                         </div>
                         <div className="skill-group">
-                            <h4>Tooling & Technologies:</h4>
+                            <h3>Tooling & Technologies:</h3>
                             <p>{skills.tooling}</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="resume-section">
-                    <h3>Professional Experience</h3>
+                    <h2>Professional Experience</h2>
                     {experiences.map((exp, index) => (
                         <ExperienceItem key={index} experience={exp} />
                     ))}
                 </div>
 
                 <div className="resume-section">
-                    <h3>Education</h3>
+                    <h2>Education</h2>
                     {education.map((edu, index) => (
                         <EducationItem key={index} education={edu} />
                     ))}
+                </div>
+
+                <div className="resume-section">
+                    <h2>Certifications</h2>
+                    <div className="certifications-list">
+                        {certifications.map((group, index) => (
+                            <CertificationItem key={index} certificationGroup={group} />
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@ import './ExperienceItem.css';
 const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience }) => (
     <div className="experience-item">
         <div className="experience-header">
-            <h4>{experience.title}</h4>
+            <h3>{experience.title}</h3>
             <p className="company-info">
                 {experience.company} | {experience.location} | {experience.period}
             </p>

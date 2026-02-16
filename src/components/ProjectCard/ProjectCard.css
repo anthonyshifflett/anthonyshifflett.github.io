@@ -43,7 +43,8 @@
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.project-card:hover .project-links {
+.project-card:hover .project-links,
+.project-card:focus-within .project-links {
     opacity: 1;
     transform: translateY(0);
 }

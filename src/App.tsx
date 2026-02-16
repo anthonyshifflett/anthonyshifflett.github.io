@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Loading from './components/Loading/Loading';
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
+import './App.css';
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home/Home'));
@@ -19,8 +20,9 @@ const App: React.FC = () => {
     <Router>
       <ErrorBoundary>
         <div className="app">
+          <a href="#main-content" className="skip-link">Skip to main content</a>
           <Header />
-          <main className="main-content">
+          <main id="main-content" className="main-content">
             <Suspense fallback={<Loading />}>
               <Routes>
                 <Route path="/" element={<Home />} />

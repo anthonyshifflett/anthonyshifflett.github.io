@@ -51,6 +51,15 @@ export interface EducationItemProps {
 
 export type SkillCategory = 'development' | 'testing' | 'tools' | 'ai';
 
+export interface CertificationGroup {
+    issuer: string;
+    items: string[];
+}
+
+export interface CertificationItemProps {
+    certificationGroup: CertificationGroup;
+}
+
 export interface CategoryMap {
     [key: string]: string;
 }

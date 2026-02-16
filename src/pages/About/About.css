@@ -2,8 +2,8 @@
     background-color: var(--background-color);
 }
 
-.about .section-container {
-    padding-top: 9rem;
+.about .section-title {
+    text-align: left;
 }
 
 .about-intro-section {
@@ -37,7 +37,7 @@
     flex: 1;
 }
 
-.about-intro h3 {
+.about-intro h2 {
     font-size: 1.75rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
@@ -45,11 +45,11 @@
 
 .about-tagline {
     font-size: 1.25rem;
-    color: var(--secondary-color);
     margin-bottom: 1.5rem;
 }
 
 .about-description p {
+    font-size: 1.25rem;
     margin-bottom: 1rem;
     line-height: 1.6;
 }
@@ -58,7 +58,7 @@
     margin-bottom: 4rem;
 }
 
-.about-highlights h3 {
+.about-highlights h2 {
     color: var(--primary-color);
     margin-bottom: 2rem;
     padding-bottom: 0.5rem;
@@ -78,43 +78,13 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.highlight-card h4 {
+.highlight-card h3 {
     color: var(--primary-color);
     margin-bottom: 0.75rem;
 }
 
 .highlight-card p {
     line-height: 1.6;
-}
-
-.certifications {
-    margin-top: 2rem;
-}
-
-.certifications h3 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--primary-color);
-}
-
-.certifications-list {
-    list-style: none;
-    padding: 0;
-}
-
-.certifications-list li {
-    margin-bottom: 0.5rem;
-    padding-left: 1.5rem;
-    position: relative;
-    line-height: 1.6;
-}
-
-.certifications-list li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: var(--primary-color);
 }
 
 @media (max-width: 768px) {

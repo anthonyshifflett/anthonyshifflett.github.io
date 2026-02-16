@@ -2,8 +2,8 @@ import React from 'react';
 import './Loading.css';
 
 const Loading: React.FC = () => (
-    <div className="loading-spinner">
-        <div className="spinner"></div>
+    <div className="loading-spinner" role="status" aria-label="Loading">
+        <div className="spinner" aria-hidden="true"></div>
     </div>
 );
 

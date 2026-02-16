@@ -21,6 +21,7 @@ const About: React.FC = () => {
     return (
         <div className="about">
             <div className="section-container">
+                <h1 className="section-title">Hello, I'm Anthony!</h1>
                 <div className="about-intro-section">
                     <div className="about-image-container">
                         <img
@@ -31,7 +32,6 @@ const About: React.FC = () => {
                     </div>
 
                     <div className="about-intro">
-                        <h3>Hello, I'm Anthony!</h3>
                         <p className="about-tagline">A results-driven engineer passionate about creating exceptional web experiences.</p>
                         <div className="about-description">
                             <p>With over 10 years of experience in software development,
@@ -42,30 +42,22 @@ const About: React.FC = () => {
                             <p>I am excited to bring my technical expertise, quality
                                 assurance focus, and user-centric approach to new challenges
                                 and opportunities. Let's connect and discuss how I can contribute
-                                to your organization's success!.
+                                to your organization's success!
                             </p>
                         </div>
                     </div>
                 </div>
 
                 <div className="about-highlights">
-                    <h3>Professional Highlights</h3>
+                    <h2>Professional Highlights</h2>
                     <div className="highlights-grid">
                         {highlights.map((highlight, index) => (
                             <div key={index} className="highlight-card">
-                                <h4>{highlight.title}</h4>
+                                <h3>{highlight.title}</h3>
                                 <p>{highlight.description}</p>
                             </div>
                         ))}
                     </div>
-                </div>
-
-                <div className="certifications">
-                    <h3>Certifications</h3>
-                    <ul className="certifications-list">
-                        <li>Google UX Design Professional Certificate</li>
-                        <li>Google Cybersecurity Certificate</li>
-                    </ul>
                 </div>
             </div>
         </div>

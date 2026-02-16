@@ -14,11 +14,10 @@ const Contact: React.FC = () => {
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
     const handleSubmit = async (e: FormEvent) => {
-        e.preventDefault(); // Prevent default form submission behavior
-        setIsSubmitting(true); // Indicate the form is being submitted
+        e.preventDefault();
+        setIsSubmitting(true);
 
         try {
-            // Send form data to Formspree to redirect to email
             const response = await fetch('https://formspree.io/f/xyzyavqq', {
                 method: 'POST',
                 headers: {
@@ -45,60 +44,63 @@ const Contact: React.FC = () => {
     return (
         <div className="contact-page">
             <div className="contact-layout">
-                {/* Left Column */}
-                <div className="contact-info">
-                    <h3>Let's Connect</h3>
+                {/* Left Column — Contact Info */}
+                <aside className="contact-info" aria-label="Contact information">
+                    <h2>Let's Connect</h2>
                     <p>I'm always interested in hearing about new opportunities, collaborations, or just having a chat about technology and development.</p>
 
                     <div className="contact-methods">
                         <a href="mailto:anthonydshifflett+portfolio@gmail.com" className="contact-method">
-                            <Mail size={24} />
+                            <Mail size={24} aria-hidden="true" />
                             <div>
-                                <h4>Email</h4>
+                                <h3>Email</h3>
                                 <span>anthonydshifflett@gmail.com</span>
                             </div>
                         </a>
 
                         <a href="https://www.linkedin.com/in/anthony-shifflett" target="_blank" rel="noopener noreferrer" className="contact-method">
-                            <Linkedin size={24} />
+                            <Linkedin size={24} aria-hidden="true" />
                             <div>
-                                <h4>LinkedIn</h4>
+                                <h3>LinkedIn</h3>
                                 <span>Connect with me</span>
                             </div>
                         </a>
 
-                        <a href="https://github.com/anthonyshifflett" target="_blank" rel="noopener noreferrer" className="contact-method">
-                            <Github size={24} />
+                        <a href="https://github.com/anthonyshifflett?tab=projects" target="_blank" rel="noopener noreferrer" className="contact-method">
+                            <Github size={24} aria-hidden="true" />
                             <div>
-                                <h4>GitHub</h4>
+                                <h3>GitHub</h3>
                                 <span>View my projects</span>
                             </div>
                         </a>
 
                         <div className="contact-method">
-                            <MapPin size={24} />
+                            <MapPin size={24} aria-hidden="true" />
                             <div>
-                                <h4>Location</h4>
+                                <h3>Location</h3>
                                 <span>Boston, MA</span>
                             </div>
                         </div>
                     </div>
-                </div>
+                </aside>
 
-                {/* Right Column */}
+                {/* Right Column — Contact Form */}
                 <div className="contact-right">
-                    <h2 className="section-title">Get in Touch</h2>
+                    <h1 className="section-title">Get in Touch</h1>
 
                     <div className="contact-form-container">
-                        <form onSubmit={handleSubmit} className="contact-form">
+                        <form onSubmit={handleSubmit} className="contact-form" noValidate>
                             <div className="form-group">
                                 <label htmlFor="name">Name</label>
                                 <input
                                     type="text"
                                     id="name"
+                                    name="name"
+                                    autoComplete="name"
                                     value={formData.name}
                                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                     required
+                                    aria-required="true"
                                 />
                             </div>
 
@@ -107,9 +109,12 @@ const Contact: React.FC = () => {
                                 <input
                                     type="email"
                                     id="email"
+                                    name="email"
+                                    autoComplete="email"
                                     value={formData.email}
                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                     required
+                                    aria-required="true"
                                 />
                             </div>
 
@@ -117,10 +122,12 @@ const Contact: React.FC = () => {
                                 <label htmlFor="message">Message</label>
                                 <textarea
                                     id="message"
+                                    name="message"
                                     value={formData.message}
                                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                     rows={5}
                                     required
+                                    aria-required="true"
                                 />
                             </div>
 
@@ -132,17 +139,19 @@ const Contact: React.FC = () => {
                                 {isSubmitting ? 'Sending...' : 'Send Message'}
                             </button>
 
-                            {submitStatus === 'success' && (
-                                <div className="form-status success">
-                                    Message sent successfully!
-                                </div>
-                            )}
+                            <div aria-live="polite" role="status">
+                                {submitStatus === 'success' && (
+                                    <div className="form-status success">
+                                        Message sent successfully!
+                                    </div>
+                                )}
 
-                            {submitStatus === 'error' && (
-                                <div className="form-status error">
-                                    There was an error sending your message. Please try again.
-                                </div>
-                            )}
+                                {submitStatus === 'error' && (
+                                    <div className="form-status error">
+                                        There was an error sending your message. Please try again.
+                                    </div>
+                                )}
+                            </div>
                         </form>
                     </div>
                 </div>

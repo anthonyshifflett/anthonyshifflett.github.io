@@ -13,7 +13,7 @@ const Projects: React.FC = () => {
             description: "A modern portfolio website built with React, TypeScript, and vanilla CSS. Features responsive design, clean architecture, and smooth animations.",
             technologies: ["React", "TypeScript", "CSS"],
             imageUrl: portfolio,
-            githubUrl: "https://github.com/anthonyshifflett",
+            githubUrl: "https://github.com/anthonyshifflett?tab=projects",
             liveUrl: "https://anthonyshifflett.com"
         },
         {
@@ -22,14 +22,14 @@ const Projects: React.FC = () => {
             description: "Comprehensive design system that reduced UI inconsistencies by 40%. Built with React and TypeScript, featuring automated visual testing.",
             technologies: ["React", "Storybook", "Jest", "TypeScript"],
             imageUrl: system,
-            githubUrl: "https://github.com/anthonyshifflett"
+            githubUrl: "https://github.com/anthonyshifflett?tab=projects"
         }
     ];
 
     return (
         <div className="projects-page">
             <div className="section-container">
-                <h2 className="section-title">Projects</h2>
+                <h1 className="section-title">Projects</h1>
 
                 <div className="projects-grid">
                     {projects.map((project) => (

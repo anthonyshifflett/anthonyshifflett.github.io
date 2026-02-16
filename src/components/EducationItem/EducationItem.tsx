@@ -4,7 +4,7 @@ import './EducationItem.css';
 
 const EducationItem: React.FC<EducationItemProps> = ({ education }) => (
     <div className="education-item">
-        <h4>{education.school}</h4>
+        <h3>{education.school}</h3>
         <p>{education.degree}</p>
     </div>
 );

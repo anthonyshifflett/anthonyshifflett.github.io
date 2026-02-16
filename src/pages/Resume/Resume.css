@@ -32,7 +32,7 @@
     margin-bottom: 3rem;
 }
 
-.resume-section h3 {
+.resume-section h2 {
     color: var(--primary-color);
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
@@ -44,6 +44,13 @@
     line-height: 1.6;
 }
 
+.summary-card {
+    padding: 1.5rem;
+    background-color: #f8fafc;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .skills-content {
     display: flex;
     flex-direction: column;
@@ -51,14 +58,13 @@
 }
 
 .skill-group {
-    margin-bottom: 1.5rem;
     padding: 1.5rem;
     background-color: #f8fafc;
     border-radius: var(--border-radius);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.skill-group h4 {
+.skill-group h3 {
     color: var(--text-color);
     margin-bottom: 0.5rem;
 }
@@ -66,59 +72,6 @@
 .skill-group p {
     color: #6b7280;
     line-height: 1.6;
-}
-
-.experience-item {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background-color: #f8fafc;
-    border-radius: var(--border-radius);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.experience-header {
-    margin-bottom: 1rem;
-}
-
-.experience-header h4 {
-    color: var(--text-color);
-    margin-bottom: 0.5rem;
-}
-
-.company-info {
-    color: #6b7280;
-    font-size: 0.9rem;
-}
-
-.achievements-list {
-    list-style: none;
-    padding: 0;
-}
-
-.achievements-list li {
-    margin-bottom: 0.75rem;
-    padding-left: 1.5rem;
-    position: relative;
-    line-height: 1.6;
-}
-
-.achievements-list li::before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    color: var(--primary-color);
-}
-
-.education-item {
-    margin-bottom: 1.5rem;
-    padding: 1.5rem;
-    background-color: #f8fafc;
-    border-radius: var(--border-radius);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.education-item h4 {
-    margin-bottom: 0.5rem;
 }
 
 @media (max-width: 768px) {
@@ -133,11 +86,6 @@
     }
 
     .skill-group {
-        padding: 1rem;
-    }
-
-    .experience-item,
-    .education-item {
         padding: 1rem;
     }
 }

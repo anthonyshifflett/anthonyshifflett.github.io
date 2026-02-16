@@ -6,7 +6,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.education-item h4 {
+.education-item h3 {
     color: var(--text-color);
     margin-bottom: 0.5rem;
 }
@@ -14,4 +14,10 @@
 .education-item p {
     color: #6b7280;
     line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .education-item {
+        padding: 1rem;
+    }
 }

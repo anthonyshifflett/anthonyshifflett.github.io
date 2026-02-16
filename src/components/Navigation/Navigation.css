@@ -17,6 +17,8 @@
     color: var(--primary-color);
     text-decoration: none;
     letter-spacing: 0.5px;
+    padding: 0.5rem 0;
+    transition: color 0.2s ease;
 }
 
 .nav-links {
@@ -35,6 +37,19 @@
     font-size: 1rem;
     padding: 0.5rem 0;
     position: relative;
+    transition: color 0.2s ease;
+}
+
+.nav-brand a:focus-visible {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    outline: none;
+}
+
+.nav-links a:focus-visible {
+    color: var(--primary-color);
+    outline: none;
 }
 
 .nav-links a::after {
@@ -49,7 +64,8 @@
 }
 
 .nav-links a:hover::after,
-.nav-links a.active::after {
+.nav-links a.active::after,
+.nav-links a:focus-visible::after {
     width: 100%;
 }
 
@@ -100,13 +116,15 @@
         height: 100vh;
         background: white;
         padding: 6rem 2rem;
-        transition: right 0.3s ease;
+        transition: right 0.3s ease, visibility 0.3s ease;
         gap: 1.5rem;
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        visibility: hidden;
     }
 
     .nav-links.active {
         right: 0;
+        visibility: visible;
     }
 
     .nav-links a {
