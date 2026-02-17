@@ -1,212 +1,183 @@
-# Personal Portfolio Website - CS601 Term Project
+# Anthony Shifflett - Portfolio Website
 
-## Project Overview
-This project serves as the final deliverable for CS601 Web Application Development. It demonstrates practical application of web development concepts, frameworks, and best practices learned throughout the course. The portfolio website aims to showcase professional experience while implementing core web technologies in a real-world application.
+A modern, responsive portfolio website showcasing my professional experience, skills, and projects. Built with React, TypeScript, and Vite, this site demonstrates best practices in web development, accessibility, and user experience design.
 
-## Project Requirements Fulfilled
+🔗 **Live Site:** [anthonyshifflett.github.io](https://anthonyshifflett.github.io)
 
-### Core Requirements
-- 5-10 content pages implementing course material
-- GitHub-hosted codebase with public access
-- Portfolio focus with personal/professional content
-- Implementation of majority of course concepts
-- Clean, documented, and maintainable code
-- Cross-browser and device compatibility
-- Accessibility compliance
+## Features
 
-### Content Pages
-1. **Home Page**
-   - Professional introduction
-   - Quick navigation to key sections
-   - Call-to-action buttons for projects and contact
+### Pages
+- **Home** - Professional introduction with quick navigation
+- **About** - Career highlights, education, and certifications
+- **Skills** - Interactive visualization of technical competencies
+- **Resume** - Downloadable resume with detailed experience
+- **Projects** - Portfolio of work with live demos and code links
+- **Contact** - Contact form and professional links
 
-2. **About Page**
-   - Professional biography
-   - Career highlights
-   - Educational background
-   - Professional certifications
+### Technical Highlights
+- ⚡️ Fast performance with code splitting and lazy loading
+- 📱 Fully responsive design (mobile-first approach)
+- ♿️ WCAG AA accessibility compliant
+- 🎨 Modern UI with smooth animations and transitions
+- 🔍 SEO optimized with meta tags and Open Graph support
+- 🌙 Clean, maintainable codebase with TypeScript
+- 🧪 Error boundaries for graceful error handling
 
-3. **Skills Page**
-   - Technical skills visualization
-   - Proficiency ratings
-   - Categorized skill sets
-   - Interactive skill displays
+## Tech Stack
 
-4. **Projects Page**
-   - Portfolio of work
-   - Project descriptions
-   - Technology stacks used
-   - Live demos and GitHub links
+- **Framework:** React 18
+- **Language:** TypeScript
+- **Build Tool:** Vite
+- **Styling:** CSS3 (custom properties, Flexbox, Grid)
+- **Routing:** React Router
+- **Deployment:** GitHub Pages
 
-5. **Resume Page**
-   - Professional experience
-   - Educational background
-   - Downloadable PDF version
-   - Skills and certifications
+## Key Features
 
-6. **Contact Page**
-   - Contact form
-   - Professional social links
-   - Location information
-   - Direct email option
+### Accessibility
+- Semantic HTML structure
+- ARIA labels and landmarks
+- Keyboard navigation support
+- Screen reader optimized
+- Focus management
+- High contrast ratios
 
-### Technical Implementation
+### Performance
+- Code splitting for optimal load times
+- Lazy loading of routes and components
+- Image optimization
+- Efficient bundle size
+- Browser caching strategies
 
-#### Core Technologies
-- **HTML5**
-  - Semantic markup
-  - Accessible structure
-  - Meta tags for SEO
-  - Open Graph protocol support
-
-- **CSS3**
-  - Custom properties for theming
-  - Flexbox and Grid layouts
-  - Responsive design
-  - Mobile-first approach
-  - Animations and transitions
-  - Media queries for breakpoints
-
-- **JavaScript/TypeScript**
-  - ES6+ features
-  - Type safety with TypeScript
-  - Modular code structure
-  - Error handling
-  - Form validation
-  - Async operations
-
-- **React**
-  - Functional components
-  - React Hooks
-  - Custom hooks
-  - Context API
-  - Route management
-  - Code splitting
-  - Lazy loading
-
-#### Extra Credit Features
-1. **TypeScript Integration**
-   - Strong typing
-   - Interface definitions
-   - Type guards
-   - Generic types
-   - Utility types
-
-2. **Responsive Design**
-   - CSS Grid Layout
-   - Flexbox
-   - No framework dependencies
-   - Custom breakpoints
-   - Fluid typography
-
-3. **Performance Optimization**
-   - Code splitting
-   - Lazy loading
-   - Image optimization
-   - Cache management
-   - Bundle size optimization
+### Responsive Design
+- Mobile-first CSS approach
+- Fluid typography and spacing
+- Custom breakpoints for all devices
+- Touch-friendly interactions
 
 ## Project Structure
 ```
-src/
-├── components/
-│   ├── ErrorBoundary/
-│   │   ├── ErrorBoundary.tsx
-│   │   └── ErrorBoundary.css
-│   ├── Footer/
-│   │   ├── Footer.tsx
-│   │   └── Footer.css
-│   ├── Header/
-│   │   ├── Header.tsx
-│   │   └── Header.css
-│   ├── Loading/
-│   │   ├── Loading.tsx
-│   │   └── Loading.css
-│   ├── Navigation/
-│   │   ├── Navigation.tsx
-│   │   └── Navigation.css
-│   ├── ProjectCard/
-│   │   ├── ProjectCard.tsx
-│   │   └── ProjectCard.css
-│   ├── SkillCard/
-│   │   ├── SkillCard.tsx
-│   │   └── SkillCard.css
-│   ├── ExperienceItem/
-│   │   ├── ExperienceItem.tsx
-│   │   └── ExperienceItem.css
-│   └── EducationItem/
-│       ├── EducationItem.tsx
-│       └── EducationItem.css
-├── pages/
-│   ├── About/
-│   │   ├── About.tsx
-│   │   └── About.css
-│   ├── Contact/
-│   │   ├── Contact.tsx
-│   │   └── Contact.css
-│   ├── Home/
-│   │   ├── Home.tsx
-│   │   └── Home.css
-│   ├── NotFound/
-│   │   ├── NotFound.tsx
-│   │   └── NotFound.css
-│   ├── Projects/
-│   │   ├── Projects.tsx
-│   │   └── Projects.css
-│   ├── Resume/
-│   │   ├── Resume.tsx
-│   │   └── Resume.css
-│   └── Skills/
-│       ├── Skills.tsx
-│       └── Skills.css
-├── styles/
-│   ├── variables.css
-│   └── global.css
-├── types/
-│   └── index.ts
-├── App.tsx
-├── App.css
-├── main.tsx
-└── vite-env.d.ts
+anthonyshifflett.github.io/
+├── public/
+│   ├── resume.pdf
+│   ├── ads.png
+│   ├── 404.html
+│   └── CNAME
+├── src/
+│   ├── assets/
+│   │   ├── images/
+│   │   └── react.svg
+│   ├── components/
+│   │   ├── CertificationItem/
+│   │   │   ├── CertificationItem.tsx
+│   │   │   └── CertificationItem.css
+│   │   ├── EducationItem/
+│   │   │   ├── EducationItem.tsx
+│   │   │   └── EducationItem.css
+│   │   ├── ErrorBoundary/
+│   │   │   ├── ErrorBoundary.tsx
+│   │   │   └── ErrorBoundary.css
+│   │   ├── ExperienceItem/
+│   │   │   ├── ExperienceItem.tsx
+│   │   │   └── ExperienceItem.css
+│   │   ├── Footer/
+│   │   │   ├── Footer.tsx
+│   │   │   └── Footer.css
+│   │   ├── Header/
+│   │   │   ├── Header.tsx
+│   │   │   └── Header.css
+│   │   ├── Loading/
+│   │   │   ├── Loading.tsx
+│   │   │   └── Loading.css
+│   │   ├── Navigation/
+│   │   │   ├── Navigation.tsx
+│   │   │   └── Navigation.css
+│   │   ├── ProjectCard/
+│   │   │   ├── ProjectCard.tsx
+│   │   │   └── ProjectCard.css
+│   │   └── SkillCard/
+│   │       ├── SkillCard.tsx
+│   │       └── SkillCard.css
+│   ├── pages/
+│   │   ├── About/
+│   │   │   ├── About.tsx
+│   │   │   └── About.css
+│   │   ├── Contact/
+│   │   │   ├── Contact.tsx
+│   │   │   └── Contact.css
+│   │   ├── Home/
+│   │   │   ├── Home.tsx
+│   │   │   └── Home.css
+│   │   ├── NotFound/
+│   │   │   ├── NotFound.tsx
+│   │   │   └── NotFound.css
+│   │   ├── Projects/
+│   │   │   ├── Projects.tsx
+│   │   │   └── Projects.css
+│   │   ├── Resume/
+│   │   │   ├── Resume.tsx
+│   │   │   └── Resume.css
+│   │   └── Skills/
+│   │       ├── Skills.tsx
+│   │       └── Skills.css
+│   ├── styles/
+│   │   ├── global.css
+│   │   └── variables.css
+│   ├── types/
+│   │   └── index.ts
+│   ├── App.tsx
+│   ├── App.css
+│   ├── index.css
+│   ├── main.tsx
+│   └── vite-env.d.ts
+├── index.html
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
 ```
 
-## Setup and Development
+
+## Getting Started
 
 ### Prerequisites
-- Node.js (v18.0.0 or higher)
-- npm (v8.0.0 or higher)
-- Git
+- Node.js 18.0.0 or higher
+- npm 8.0.0 or higher
 
 ### Installation
-1. Clone the repository
-```bash
-git clone https://github.com/anthonyshifflett/portfolio.git
-cd portfolio
-```
 
-2. Install dependencies
 ```bash
+# Clone the repository
+git clone https://github.com/anthonyshifflett/anthonyshifflett.github.io.git
+cd anthonyshifflett.github.io
+
+# Install dependencies
 npm install
-```
 
-3. Start development server
-```bash
+# Start development server
 npm run dev
 ```
 
-4. Run tests
-```bash
-npm test
-```
-
-5. Build for production
-```bash
-npm run build
-```
-
 ### Available Scripts
-- `npm run dev`: Start development server
-- `npm run build`: Build for production
-- `npm run preview`: Preview production build
-- `npm run lint`: Run ESLint
-- `npm test`: Run test suite
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
+| `npm test` | Run test suite |
+
+## Deployment
+
+This site is automatically deployed to GitHub Pages when changes are pushed to the main branch via GitHub Actions.
+
+## License
+
+This project is open source and available under the MIT License.
+
+## Contact
+
+**Anthony Shifflett**
+- Website: [anthonyshifflett.github.io](https://anthonyshifflett.github.io)
+- GitHub: [@anthonyshifflett](https://github.com/anthonyshifflett)
