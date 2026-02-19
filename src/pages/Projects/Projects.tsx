@@ -11,7 +11,7 @@ const Projects: React.FC = () => {
             id: 1,
             title: "Portfolio Website",
             description: "A modern portfolio website built with React, TypeScript, and vanilla CSS. Features responsive design, clean architecture, and smooth animations.",
-            technologies: ["React", "TypeScript", "CSS"],
+            technologies: ["React", "TypeScript", "CSS", "Vite"],
             imageUrl: portfolio,
             githubUrl: "https://github.com/anthonyshifflett?tab=projects",
             liveUrl: "https://anthonyshifflett.com"
@@ -20,7 +20,7 @@ const Projects: React.FC = () => {
             id: 2,
             title: "Design System Implementation",
             description: "Comprehensive design system that reduced UI inconsistencies by 40%. Built with React and TypeScript, featuring automated visual testing.",
-            technologies: ["React", "Storybook", "Jest", "TypeScript"],
+            technologies: ["React", "TypeScript", "Storybook", "Chromatic", "Jest", "Style Dictionary", "React Aria", "Atomic Design"],
             imageUrl: system,
             githubUrl: "https://github.com/anthonyshifflett?tab=projects"
         }
@@ -35,6 +35,13 @@ const Projects: React.FC = () => {
                     {projects.map((project) => (
                         <ProjectCard key={project.id} project={project} />
                     ))}
+                </div>
+
+                <div className="projects-coming-soon">
+                    <span className="coming-soon-badge"><span aria-hidden="true">🚧</span> In Progress</span>
+                    <p>
+                        I'm actively working on more projects to feature here — check back soon.
+                    </p>
                 </div>
             </div>
         </div>
